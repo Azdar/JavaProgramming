@@ -1,0 +1,33 @@
+package train.bin.main;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class MenuBars extends JMenuBar{
+
+  private static final long serialVersionUID = -5897249375042263700L;
+
+	public MenuBars() {
+		JMenu File = new JMenu("File");
+		JMenuItem Search = new JMenuItem("Search");
+		File.add(Search);
+		Search.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				Method.Search();
+			}
+			
+			
+		});
+		add(File);
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
