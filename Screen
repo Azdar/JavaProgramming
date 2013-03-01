@@ -1,0 +1,100 @@
+package train.bin.main;
+
+import java.awt.Graphics;
+import java.util.Scanner;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class Method{
+  
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public static void Grader(){
+		
+		JFrame j = new JFrame();
+		JOptionPane ja = new JOptionPane();
+		Scanner s = new Scanner(System.in);
+		Main m = new Main();
+
+		
+		
+		
+		String q1 = JOptionPane.showInputDialog("How many questions are there", "insert here");
+	
+		double Q1 = Integer.parseInt(q1);
+	
+		if(Q1 > 100){
+			
+			JOptionPane.showMessageDialog(null, "I'm sorry you can only have 100 questions or less", "Error", JOptionPane.PLAIN_MESSAGE);
+			
+			return;
+			
+		}
+		
+		String q2 = JOptionPane.showInputDialog("How many questions where correct", "insert here" );
+		
+		double Q2 = Integer.parseInt(q2);
+	
+		double per = 100 / Q1; 
+		System.out.println(per);
+		double gra = per*(Q2);
+		double grade = Math.round(gra);
+		
+		
+		JOptionPane.showMessageDialog(null, grade, "Grade!!!!", JOptionPane.PLAIN_MESSAGE);
+		
+	 
+	
+	}
+	public static void Search(){
+		
+		String q1;
+		q1 = JOptionPane.showInputDialog("Searching");
+		
+		
+		System.out.println(q1);
+		
+		
+		
+		if( q1.equals("grader")){
+			Method.Grader();
+			System.exit(0);
+			
+		}if(q1.equals("grade")){
+			Method.Grader();
+			System.exit(0);
+			
+		}if(q1.equals("Grade")){
+			Method.Grader();
+			System.exit(0);
+			
+		}if(q1.equals("g")){
+			Method.Grader();
+			System.exit(0);
+			
+		}if(q1.equals("G")){
+			Method.Grader();
+			System.exit(0);
+			
+		}if(q1.equals("Grader")){
+			Method.Grader();
+			System.exit(0);
+			
+		}else{
+			JOptionPane.showMessageDialog(null, "Sorry I couldn't find "+q1, "Search", JOptionPane.PLAIN_MESSAGE);
+			System.exit(0);
+			
+			
+		}
+		
+		
+		
+	}
+	
+	
+	
+}
